@@ -272,11 +272,13 @@ Definimos `app_name` para especificar o nome da aplicação, a ser usado nos hip
 
 ## 6. hiperlinks 🔗
 
-Uma das propriedades chave de um website é podermos navegar entre as páginas HTML através de hiperlinks. Vamos adicionar um menu de navegação com hiperlinks em cada uma das páginas. Será um marcador <nav> com vários marcadores <a>, um por hiperlink. Constroi-se especificando o valor de `name` que foi dado em `urls.py` à rota. `{% url 'index' %}`é um bloco da linguagem template do Django. Falaremos mais em detalhe na proxima aula.
+Uma das propriedades chave de um website é podermos navegar entre as páginas HTML através de hiperlinks. Vamos adicionar um menu de navegação com hiperlinks em cada uma das páginas. Será um marcador <nav> com vários marcadores <a>, um por hiperlink. Constroi-se especificando o valor de `name` que foi dado em `urls.py` à rota. `{% url 'pwsite:index' %}`é um bloco da linguagem template do Django. Falaremos mais em detalhe na próxima aula. este tem dois componentes:
+* o nome da aplicação, que está na variável app_name em `pwsite/urls.py`
+* o nome da rota, que está no respetivo path em `pwsite/urls`
 
 ```html
 <nav>
-  <a href="{% url 'index' %}">Introducao</a>
+  <a href="{% url 'pwsite:index' %}">Introducao</a>
 </nav>
 ```
 
