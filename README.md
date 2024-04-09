@@ -118,7 +118,7 @@ urlpatterns = [
 ]
 ```
 
-***Neste caso, a rota `index/` é mapeada na função `views.index_view`, querendo dizer que, sempre que a rota é acedida num browser (`a222222.pythonanywhere.com/noobsite/index/`), a função correspondente é executada. A lista `urlpatterns` encaminha (*routes*) URLs para funções em views.py. Neste caso, encaminha o URL `index/` para a função `view.index_view`.***
+***Neste caso, a rota `index/` é mapeada na função `views.index_view`, querendo dizer que, sempre que a rota é acedida num browser (`a222222.pythonanywhere.com/noobsite/index/`), a função `views.index_view` é executada. A lista `urlpatterns` encaminha (*routes*) URLs para funções em views.py. Neste caso, encaminha o URL `index/` para a função `view.index_view`.***
 
 Adicione URLs para as restantes funções que definiu.
 
