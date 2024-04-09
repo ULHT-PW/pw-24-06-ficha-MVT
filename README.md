@@ -3,7 +3,6 @@ Univesidade Lusófona
 
 # Ficha 6: O poder da arquitetura MVT na criação de websites
 
-"Ficha 6: Desenvolvimento dos meus primeiros websites com a arquitetura MVT."
 ### Objetivo:
 * Familiarizar-se com a criação de websites simples.
 * Familiarizar-se com urls, views t templates HTML 
