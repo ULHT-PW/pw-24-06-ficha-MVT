@@ -65,8 +65,8 @@ python manage.py startapp noobsite
 
 ## 2. configuração 🔧
 
-Na sua pasta project:
-1. no ficheiro `project/settings.py`, à lista INSTALLED_APPS adicione a aplicação `noobsite`
+Na sua pasta `project`:
+1. no ficheiro `project/settings.py`, adicione à lista INSTALLED_APPS a aplicação `noobsite`
 1. no ficheiro `project/urls.py`:
     * importe a função `include` . 
     * na lista `urlpatterns` insira um novo `path` que encaminhe o URL `noobsite/` para `noobsite.urls`. O código será o seguinte:
@@ -91,7 +91,7 @@ urlpatterns = [
 Crie, no ficheiro `views.py`, uma função responsável por responder com uma frase muito simples.
 
 ```Python
-# project/views.py
+# noobsite/views.py
 
 from django.http import HttpResponse
 
@@ -288,9 +288,12 @@ urlpatterns = [
 
 ## 6. hiperlinks 🔗
 
-Uma das propriedades chave de um website é podermos navegar entre as páginas HTML através de hiperlinks. Adicione um menu de navegação com hiperlinks para cada uma das páginas, permitindo assim navegar de uma pagina para a outra. Para tal, crie um marcador `<nav>` de navegação, dentro do qual criará marcadores `<a>` com hiperlinks para as três páginas. Copie este elemento em todas as páginas, dentro do elemento `header`, por baixo do elemento `<h1>`.
+Uma das propriedades chave de um website é podermos navegar entre as páginas HTML através de hiperlinks. Adicione um menu de navegação com hiperlinks para cada uma das páginas, permitindo assim navegar de uma pagina para a outra. Para tal, 
+* crie um marcador `<nav>` de navegação
+* dentro deste crie marcadores `<a>` com hiperlinks para as três páginas.
+* Insira este elemento em todas as páginas HTML, dentro do elemento `<header>`, por baixo do elemento `<h1>`.
 
-Em baixo está o exemplo de um elemento `<nav>` apenas com um hiperlink.  
+Em baixo, está o exemplo de um elemento `<nav>` apenas com um hiperlink `<a>`.  
       
 ```html
 <nav>
