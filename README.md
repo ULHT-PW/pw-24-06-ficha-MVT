@@ -242,7 +242,7 @@ No ficheiro views, crie funções que renderizem o conteúdo. Para index.html se
 from django.shortcuts import render
 
 def index_view(request):
-    return render(request, "pwsite/index.html", name="index")
+    return render(request, "pwsite/index.html")
 ```
 
 Inclua uma função para renderizar sobre.html e interesses.html. Adicione a cada rota um valor para `name`. Será necessário para construir hiperlinks.
