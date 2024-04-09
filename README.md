@@ -4,14 +4,15 @@ Univesidade Lusófona
 # Ficha 6: O poder da arquitetura MVT na criação de websites
 
 ### Objetivo:
+* Familiarizar-se com as componentes View e Template da arquitetura Model View Template (MVT). Nesta ficha não integraremos ainda o que aprenderam sobre o modelação, tal acontecerá na ficha 7.
 * Familiarizar-se com a criação de websites simples.
-* Familiarizar-se com urls, views t templates HTML 
-* Nesta ficha não exploraremos ainda o models.
+* Familiarizar-se em particular com criação de rotas em urls.py, de funções em views.py e de templates HTML.
 
 ### Índice:
 * &alpha;. Introdução ao HTML `<>`
 * A. noobsite, o meu primeiro website 👶
 * B. pwsite 😎
+* C. website a seu gosto 😎
 * &omega; Entrega 📦
 
 # &alpha;. Introdução ao HTML `<>`
@@ -50,9 +51,9 @@ Dentro de um marcador podem ser especificados pares de `atributo="valor"`. Os at
 </details>
 
 
-# A. `noobsite`, o meu primeiro website 👶
+# A. `noobsite`, o meu primeiro website 🤓
 
-Neste primeiro exercício, criará o website mais simples do mundo! Um conjunto de páginas sem HTML nem hiperlinks, para se familiarizar com `urls` e `views`.
+Neste primeiro exercício, criará o website mais simples do mundo! Um conjunto de páginas sem HTML nem hiperlinks, apenas para se familiarizar com `urls.py` e `views.py`.
 
 ## 1. criação da aplicação ✨
 
@@ -291,7 +292,7 @@ Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as
 * teste os URL que criou, e verifique se as respectivas funções retornam o devido.
 
 
-# C. Crie uma aplicação web a seu gosto
+# C. Crie um website a seu gosto
 
 Crie uma aplicação a seu gosto. Relembre os passos:
 1. ✨ criação da aplicação com `python manage.py startapp novaapp`
