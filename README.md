@@ -145,6 +145,8 @@ python manage.py startapp pwsite
 
 ## 2. configuração 🔧
 
+***Embora a arquitetura do Django seja chamada de Model-View-Template (MVT), ela abrange mais do que apenas essas três camadas. O Django segue o princípio de "batteries-included" (baterias incluídas), o que significa que fornece uma estrutura abrangente que facilita o desenvolvimento web. A configuração das aplicações e URLs é parte da camada de configuração do Django***
+
 Na sua pasta project:
 * no ficheiro `project/settings.py`, à lista INSTALLED_APPS adicione a aplicação `pwsite`
 * no ficheiro `project/urls.py`, e de forma semelhante à Secção A.2, insira um novo `path` que encaminhe o URL `pwsite/` para `pwsite.urls`.
