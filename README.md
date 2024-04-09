@@ -4,7 +4,7 @@ Univesidade Lusófona
 # Ficha 6: O poder da arquitetura MVT na criação de websites
 
 ### Objetivo:
-* Familiarizar-se com as componentes View e Template da arquitetura Model View Template (MVT). Nesta ficha não integraremos ainda o que aprenderam sobre o modelação, tal acontecerá na ficha 7.
+* Familiarizar-se com as camadas View e Template da arquitetura Model-View-Template (MVT). Nesta ficha não integraremos ainda a camada de modelação; tal acontecerá na ficha 7.
 * Familiarizar-se com a criação de websites simples.
 * Familiarizar-se em particular com criação de rotas em urls.py, de funções em views.py e de templates HTML.
 
@@ -86,7 +86,9 @@ urlpatterns = [
 
 ## 3. views.py ⚙️
 
-As views são funções responsáveis por responder ao pedido (request) de um recurso (URL), retornando o recurso pedido, um template HTML eventualmente renderizado com dados e customizado. Fazem assim a interligação entre os dados e os templates (conteúdo retornado), respondendo aos pedidos encaminhados via urls.
+***No MVT, a camada de View lida com a lógica de negócios e a preparação dos dados. É implementada pelo ficheiro views.py, um conjunto de funções, cada uma responsável por responder ao pedido (request) de um recurso (URL), retornando o recurso pedido, um template HTML eventualmente renderizado com dados e customizado. Fazem assim a interligação entre os dados e os templates (conteúdo retornado), respondendo aos pedidos encaminhados via urls.***
+
+Crie, no ficheiro `views.py`, uma função responsável por responder com uma frase muito simples.
 
 ```Python
 # project/views.py
@@ -101,6 +103,8 @@ Crie mais três funções diferentes a seu gosto, que retornem coisas diferentes
 
 ## 4. urls.py ✉️
 
+***Na arquitetura MVT do Django, existe uma camada (URLConf) relacionada com a View que é responsável pelo mapeamento de rotas para funções de view. Esta camada é implementada no ficheiro urls.py. Nela se definem padrões de URL para a aplicação, e associa-os a funçoes de view específicas.***
+
 Na pasta noobsite, crie um novo ficheiro `urls.py` com o seguinte conteúdo:
 
 ```Python
@@ -114,7 +118,9 @@ urlpatterns = [
 ]
 ```
 
-A lista urlpatterns encaminha (*routes*) URLs para funções em views.py. Neste caso, encaminha o URL `index/` para a função `view.index_view`. Adicione URLs para as restantes funções que definiu.
+***Neste caso, a rota `index/` é mapeada na função `views.index_view`, querendo dizer que, sempre que a rota é acedida num browser (`a222222.pythonanywhere.com/noobsite/index/`), a função correspondente é executada. A lista `urlpatterns` encaminha (*routes*) URLs para funções em views.py. Neste caso, encaminha o URL `index/` para a função `view.index_view`.***
+
+Adicione URLs para as restantes funções que definiu.
 
 ## 5. Ready... GO! 🏁
 
