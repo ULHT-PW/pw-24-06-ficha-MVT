@@ -10,8 +10,8 @@ Univesidade Lusófona
 
 ### Índice:
 * &alpha;. Introdução ao HTML `<>`
-* A. noobsite, o meu primeiro website 👶
-* B. pwsite 😎
+* A. noobsite, páginas soltas 👶
+* B. pwsite, o meu primeiro website 😎
 * C. website a seu gosto 😎
 * &omega; Entrega 📦
 
@@ -51,7 +51,7 @@ Dentro de um marcador podem ser especificados pares de `atributo="valor"`. Os at
 </details>
 
 
-# A. `noobsite`, o meu primeiro website 🤓
+# A. `noobsite`, páginas soltas 🤓
 
 Neste primeiro exercício, criará o website mais simples do mundo! Um conjunto de páginas sem HTML nem hiperlinks, apenas para se familiarizar com `urls.py` e `views.py`.
 
@@ -125,7 +125,7 @@ Parabéns, criou o seu primeiro website 🥳.
 
 
 
-# B. `pwsite`, agora sim 😎
+# B. `pwsite`, agora sim, o meu primeiro website 😎
 
 Crie agora um segunto website, mais refinado, sobre programação web. Será um conjunto de páginas HTML com hiperlinks entre si, para se familiarizar ainda mais com `urls` e `views`, e agora também com `templates HTML`.
 
