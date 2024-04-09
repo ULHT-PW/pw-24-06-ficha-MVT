@@ -26,7 +26,7 @@ Por exemplo, no elemento `<p>Isto é um parágrafo.</p>`:
 
 <details>
  
- <summary>Clique para ver os marcadores usados nesta ficha</summary>
+ <summary><b>Clique para ver os marcadores usados nesta ficha</b></summary>
 
 * `<h1>` = marcador que define um titulo - heading1, a fonte ficando graaande (`<h2>` um subtítulo, `<h3>` um subsubtítulo, ...)
 * `<p>` = marcador que define um parágrafo
