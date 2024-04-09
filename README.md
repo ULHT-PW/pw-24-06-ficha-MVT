@@ -65,8 +65,8 @@ python manage.py startapp noobsite
 ## 2. configuração 🔧
 
 Na sua pasta project:
-* no ficheiro `project/settings.py`, à lista INSTALLED_APPS adicione a aplicação `noobsite`
-* no ficheiro `project/urls.py`:
+1. no ficheiro `project/settings.py`, à lista INSTALLED_APPS adicione a aplicação `noobsite`
+1. no ficheiro `project/urls.py`:
     * importe a função `include` . 
     * na lista `urlpatterns` insira um novo `path` que encaminhe o URL `noobsite/` para `noobsite.urls`. O código será o seguinte:
 
