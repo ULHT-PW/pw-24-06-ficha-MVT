@@ -290,6 +290,19 @@ Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as
 * Recarregue (reload) a aplicação premindo no botão "Reload", e abra numa página a aplicação.
 * teste os URL que criou, e verifique se as respectivas funções retornam o devido.
 
+
+# C. Crie uma aplicação web a seu gosto
+
+Crie aplicação a seu gosto. Relembre os passos:
+1. criação da aplicação ✨ com startapp
+2. configuração 🔧 do ficheiro `project/settings.py` e `project/settings.py` com info da nova aplicação
+3. criação da pasta `templates/novaapp`, e de um conjunto de pelo menos 3 ficheiros HTML
+4. definição em views.py ⚙️ de funções que renderizem os templates.
+5. criação do ficheiro `novaapp/urls.py` ✉️ (use como base o ficheiro `project/urls.py`), definindo um `app_name`, e em urlpatterns os paths com URLs e respetivas funções em views com um `name` cada.
+6. criação de menu de navegação com hiperlinks 🔗 para todas as páginas.
+7. Recarregar (reload) a aplicação. Eventuais erros serão apresentados de forma explícita, pois está em modo debug.
+
+
 # &omega; Entrega 📦
 
 Submeta no Moodle o link para cada uma das suas aplicações, Adicione `pwprofs` em Account\Education\teacher, para os professores poderem ajudar e verificar o código desenvolvido. 
