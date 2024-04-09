@@ -124,8 +124,6 @@ Parabéns, criou o seu primeiro website 🥳.
 
 
 
-
-
 # B. `pwsite`, agora sim 😎
 
 Crie agora um segunto website, mais refinado, sobre programação web. Será um conjunto de páginas HTML com hiperlinks entre si, para se familiarizar ainda mais com `urls` e `views`, e agora também com `templates HTML`.
