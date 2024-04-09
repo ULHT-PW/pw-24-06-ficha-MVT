@@ -86,7 +86,7 @@ urlpatterns = [
 
 ## 3. views.py ⚙️
 
-***No MVT, a camada de View lida com a lógica de negócios e a preparação dos dados. É implementada pelo ficheiro views.py, um conjunto de funções, cada uma responsável por responder ao pedido (request) de um recurso (URL), retornando o recurso pedido, um template HTML eventualmente renderizado com dados e customizado. Faz assim a interligação entre os dados e os templates (conteúdo retornado), respondendo aos pedidos encaminhados via urls.***
+***No MVT, a camada de View lida com a lógica de negócios e a preparação dos dados. É implementada pelo ficheiro views.py que congrega um conjunto de funções, cada uma responsável por responder ao pedido (request) de um recurso (URL), retornando o recurso pedido, um template HTML eventualmente renderizado com dados e customizado. Faz assim a interligação entre os dados e os templates (conteúdo retornado), respondendo aos pedidos encaminhados via urls.***
 
 Crie, no ficheiro `views.py`, uma função responsável por responder com uma frase muito simples.
 
