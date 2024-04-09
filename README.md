@@ -9,9 +9,10 @@ Univesidade Lusófona
 * Nesta ficha não exploraremos ainda o models.
 
 Índice:
-* &alpha;. Introdução ao HTML
+* &alpha;. Introdução ao HTML `<>`
 * A. noobsite, o meu primeiro website 👶
 * B. pwsite 😎
+* &Omega; Entrega 📦
 
 # &alpha;. Introdução ao HTML `<>`
 
@@ -125,7 +126,7 @@ Parabéns, criou o seu primeiro website 🥳.
 
 
 
-# B. `pwsite` 😎
+# B. `pwsite`, agora sim 😎
 
 Crie agora um segunto website, mais refinado, sobre programação web. Será um conjunto de páginas HTML com hiperlinks entre si, para se familiarizar ainda mais com `urls` e `views`, e agora também com `templates HTML`.
 
@@ -281,10 +282,14 @@ Uma das propriedades chave de um website é podermos navegar entre as páginas H
 </nav>
 ```
 
-Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as páginas, por baixo do título no elemento <h1>.
+Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as páginas, por baixo do título no elemento `<h1>`.
 
 
 ## 7. Ready... GO! 🎉 
 
 * Recarregue (reload) a aplicação premindo no botão "Reload", e abra numa página a aplicação.
 * teste os URL que criou, e verifique se as respectivas funções retornam o devido.
+
+# &Omega; Entrega 📦
+
+Submeta no Moodle o link para cada uma das suas aplicações, Adicione `pwprofs` em Account\Education\teacher, para os professores poderem ajudar e verificar o código desenvolvido. 
