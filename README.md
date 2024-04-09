@@ -293,7 +293,7 @@ Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as
 
 # C. Crie uma aplicação web a seu gosto
 
-Crie aplicação a seu gosto. Relembre os passos:
+Crie uma aplicação a seu gosto. Relembre os passos:
 1. ✨ criação da aplicação com `python manage.py startapp novaapp`
 2. 🔧 configuração do ficheiro `project/settings.py` e `project/settings.py` com info da nova aplicação
 3. `<>` criação da pasta `templates/novaapp`, e de um conjunto de pelo menos 3 ficheiros HTML
