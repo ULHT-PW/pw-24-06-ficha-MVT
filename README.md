@@ -8,8 +8,12 @@ Univesidade Lusófona
 * Familiarizar-se com urls, views t templates HTML 
 * Nesta ficha não exploraremos ainda o models.
 
+Índice:
+* Introdução ao HTML
+* A. noobsite, o meu primeiro website 👶
+* B. pwsite 😎
 
-# HTML `<>`
+# Introdução ao HTML `<>`
 
 O HTML é uma linguagem de marcação para construir páginas Web (*HyperText Markup Language*). Os ficheiros HTML possuem marcadores ou etiquetas (*tags*), palavras entre parênteses angulares (`<` e `>`) que são comandos de formatação da linguagem, para estruturar e estilizar aos conteúdos. 
 
@@ -50,7 +54,7 @@ Dentro de um marcador podem ser especificados pares de `atributo="valor"`. Os at
 
 Neste primeiro exercício, criará o website mais simples do mundo! Um conjunto de páginas sem HTML nem hiperlinks, para se familiarizar com `urls` e `views`.
 
-### 1. criação da aplicação
+## 1. criação da aplicação ✨
 
 No seu projeto do PythonAnyWhere, crie a aplicação `noobsite`:
 
@@ -58,7 +62,7 @@ No seu projeto do PythonAnyWhere, crie a aplicação `noobsite`:
 python manage.py startapp noobsite
 ```
 
-### 2. configuração
+## 2. configuração 🔧
 
 Na sua pasta project:
 * no ficheiro `project/settings.py`, à lista INSTALLED_APPS adicione a aplicação `noobsite`
@@ -79,7 +83,7 @@ urlpatterns = [
 ]
 ```
 
-### 3. views.py ⚙️
+## 3. views.py ⚙️
 
 As views são funções responsáveis por responder ao pedido (request) de um recurso (URL), retornando o recurso pedido, um template HTML eventualmente renderizado com dados e customizado. Fazem assim a interligação entre os dados e os templates (conteúdo retornado), respondendo aos pedidos encaminhados via urls.
 
@@ -94,7 +98,7 @@ def index_view(request):
 
 Crie mais três funções diferentes a seu gosto, que retornem coisas diferentes.
 
-### 4. urls.py ✉️
+## 4. urls.py ✉️
 
 Na pasta noobsite, crie um novo ficheiro `urls.py` com o seguinte conteúdo:
 
@@ -111,7 +115,7 @@ urlpatterns = [
 
 A lista urlpatterns encaminha (*routes*) URLs para funções em views.py. Neste caso, encaminha o URL `index/` para a função `view.index_view`. Adicione URLs para as restantes funções que definiu.
 
-### 5. Ready... GO! 🏁
+## 5. Ready... GO! 🏁
 
 * Recarregue (reload) a aplicação premindo no botão "Reload", e abra numa página a aplicação.
 * teste os URL que criou ( por exemplo `http://a222222.pythonanywhere.com/noobsite/index` ), e verifique se as respectivas funções retornam o devido.
@@ -122,11 +126,11 @@ Parabéns, criou o seu primeiro website 🥳.
 
 
 
-# B. pwsite, um website sobre PW 😎
+# B. pwsite 😎
 
 Crie agora um segunto website, mais refinado, sobre programação web. Será um conjunto de páginas HTML com hiperlinks entre si, para se familiarizar ainda mais com `urls` e `views`, e agora também com `templates HTML`.
 
-### 1. criação da aplicação
+## 1. criação da aplicação ✨
 
 No seu projeto do PythonAnyWhere, crie uma nova aplicação `pwsite`:
 
@@ -134,19 +138,19 @@ No seu projeto do PythonAnyWhere, crie uma nova aplicação `pwsite`:
 python manage.py startapp pwsite
 ```
 
-### 2. configuração
+## 2. configuração 🔧
 
 Na sua pasta project:
 * no ficheiro `project/settings.py`, à lista INSTALLED_APPS adicione a aplicação `pwsite`
 * no ficheiro `project/urls.py`, e de forma semelhante à Secção A.2, insira um novo `path` que encaminhe o URL `pwsite/` para `pwsite.urls`.
 
-### 3. templates HTML 🖺
+## 3. templates HTML 🖺
 
 Designa-se de template um ficheiro HTML retornado ao browser por uma função view específica, eventualmente renderizado com conteúdos. Começamos assim por construir os conteúdos que teremos para retornar a um cliente. 
 
 Na pasta `pwsite`, crie a pasta `templates`, e dentro dessa uma pasta `pwsite`. Crie um ficheiro `index.html` (ficando com o caminho `/home/axxxxxx/project/pwsite/templates/pwsite/index.html`) e insira o conteúdo em baixo.
 
-##### index.html
+#### index.html
 ```HTML
 <!DOCTYPE html>
 <html lang="pt">
@@ -187,7 +191,7 @@ Apesar de não ser obrigatório, é importante ter o HTML bem indentado, para ga
 
 Conforme falado na aula, no elemento <style> podemos estilizar elementos HTML. Neste caso, `background:purple` indica que o body tem cor de fundo roxo, e `color:white` que a cor de texto branco. Mude a seu gosto para as outras páginas. 
 
-##### sobre.html
+#### sobre.html
 crie também o ficheiro `sobre.html`
 
 ```html
@@ -225,12 +229,12 @@ crie também o ficheiro `sobre.html`
 </body>
 </html>
 ```
-##### interesses.html
+#### interesses.html
 
 Crie uma terceira página onde fala daquilo que tem mais gostado de aprender em PW, coisas que gostaria de aprender ou acha interessante nesta área, ou ideias de sites que possa vir a fazer.
 
 
-### 4. views.py ⚙️
+## 4. views.py ⚙️
 
 No ficheiro views, crie funções que renderizem o conteúdo. Para index.html será
 
@@ -247,7 +251,7 @@ Inclua uma função para renderizar sobre.html e interesses.html. Adicione a cad
 
 Experimente passar como contexto a data, e apresente-a no footer em vez do ano, recorrendo ao módulo datetime, de forma a que esta apareça na pagina home (veja os slides da aula).
 
-### 5. urls.py ✉️
+## 5. urls.py ✉️
 
 Na pasta noobsite, crie um novo ficheiro `urls.py` com o seguinte conteúdo:
 
@@ -268,22 +272,20 @@ A lista urlpatterns encaminha (*routes*) URLs para funções em views.py. Neste 
 
 Definimos `app_name` para especificar o nome da aplicação, a ser usado nos hiperlinks.
 
-### 7. hiperlinks 🔗
+## 6. hiperlinks 🔗
 
-Um dos elementos chave de um website é o facto de podermos navegar entre as páginas HTML através de hiperlinks. Vamos adicionar um menu de navegação com hiperlinks em cada uma das páginas. Será um marcador <nav> com vários marcadores <a>, um por hiperlink. Constroi-se especificando o valor de `name` que foi dado em `urls.py` à rota.
-
+Uma das propriedades chave de um website é podermos navegar entre as páginas HTML através de hiperlinks. Vamos adicionar um menu de navegação com hiperlinks em cada uma das páginas. Será um marcador <nav> com vários marcadores <a>, um por hiperlink. Constroi-se especificando o valor de `name` que foi dado em `urls.py` à rota. `{% url 'index' %}`é um bloco da linguagem template do Django. Falaremos mais em detalhe na proxima aula.
 
 ```html
 <nav>
   <a href="{% url 'index' %}">Introducao</a>
 </nav>
-
 ```
 
 Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as páginas, por baixo do título no elemento <h1>.
 
 
-### 7. Ready... GO! 🎉 
+## 7. Ready... GO! 🎉 
 
 * Recarregue (reload) a aplicação premindo no botão "Reload", e abra numa página a aplicação.
 * teste os URL que criou, e verifique se as respectivas funções retornam o devido.
