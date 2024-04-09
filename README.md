@@ -280,7 +280,7 @@ Uma das propriedades chave de um website é podermos navegar entre as páginas H
 </nav>
 ```
 
-Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as páginas, por baixo do título no elemento `<h1>`.
+Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as páginas, dentro do elemento `header`, por baixo do elemento `<h1>`.
 
 
 ## 7. Ready... GO! 🎉 
