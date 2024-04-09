@@ -188,7 +188,7 @@ Na pasta `pwsite`, crie a pasta `templates`, e dentro dessa uma pasta `pwsite`. 
 ```
 Apesar de não ser obrigatório, é importante ter o HTML bem indentado, para garantir visualmente que não nos esquecemos de marcadores de fecho.
 
-Conforme falado na aula, no elemento <style> podemos estilizar elementos HTML. Neste caso, `background:purple` indica que o body tem cor de fundo roxo, e `color:white` que a cor de texto branco. Mude a seu gosto para as outras páginas. 
+Conforme falado na aula, no elemento <style> podemos estilizar elementos HTML. Neste caso, `background:purple` indica que o body tem cor de fundo roxo, e `color:white` que a cor de texto branco. Mude a seu gosto estes atributos. 
 
 #### sobre.html
 crie também o ficheiro `sobre.html`
@@ -300,7 +300,7 @@ Crie uma aplicação a seu gosto. Relembre os passos:
 3. `<>` criação da pasta `templates/novaapp`, e de um conjunto de pelo menos 3 ficheiros HTML simples, com conteúdos a seu gosto. se não tiver ideias de texto, pode usar https://www.lipsum.com/ para gerar texto em latim. o importante não é o conteudo, mas os passos do processo. Todas as páginas deverão ter um `header` e `footer` semelhante.
 4.  ⚙️ definição em views.py de funções que renderizem os templates.
 5. ✉️ criação do ficheiro `novaapp/urls.py` (use como base o ficheiro `project/urls.py`), definindo um `app_name`, e em urlpatterns os paths com URLs e respetivas funções em views com um `name` cada.
-6. 🔗 criação de menu de navegação com hiperlinks para todas as páginas.
+6. 🔗 criação de menu de navegação com hiperlinks para todas as páginas, que deverá estar presente no header de todas as páginas criadas.
 7. ⟳ Recarregar (reload) a aplicação. Eventuais erros serão apresentados de forma explícita, pois está em modo debug.
 
 
