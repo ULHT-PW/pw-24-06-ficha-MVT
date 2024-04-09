@@ -5,7 +5,7 @@ Univesidade Lusófona
 
 ### Objetivo:
 * Familiarizar-se com as camadas View e Template da arquitetura Model-View-Template (MVT). Nesta ficha não integraremos ainda a camada de modelação; tal acontecerá na ficha 7.
-* Familiarizar-se com a criação de websites simples.
+* Familiarizar-se com a criação de 3 websites simples, sistematizando o processo de criação de aplicações.
 * Familiarizar-se em particular com criação de rotas em urls.py, de funções em views.py e de templates HTML.
 
 ### Índice:
@@ -86,7 +86,7 @@ urlpatterns = [
 
 ## 3. views.py ⚙️
 
-***No MVT, a camada de View lida com a lógica de negócios e a preparação dos dados. É implementada pelo ficheiro views.py, um conjunto de funções, cada uma responsável por responder ao pedido (request) de um recurso (URL), retornando o recurso pedido, um template HTML eventualmente renderizado com dados e customizado. Fazem assim a interligação entre os dados e os templates (conteúdo retornado), respondendo aos pedidos encaminhados via urls.***
+***No MVT, a camada de View lida com a lógica de negócios e a preparação dos dados. É implementada pelo ficheiro views.py, um conjunto de funções, cada uma responsável por responder ao pedido (request) de um recurso (URL), retornando o recurso pedido, um template HTML eventualmente renderizado com dados e customizado. Faz assim a interligação entre os dados e os templates (conteúdo retornado), respondendo aos pedidos encaminhados via urls.***
 
 Crie, no ficheiro `views.py`, uma função responsável por responder com uma frase muito simples.
 
@@ -149,11 +149,18 @@ Na sua pasta project:
 * no ficheiro `project/settings.py`, à lista INSTALLED_APPS adicione a aplicação `pwsite`
 * no ficheiro `project/urls.py`, e de forma semelhante à Secção A.2, insira um novo `path` que encaminhe o URL `pwsite/` para `pwsite.urls`.
 
-## 3. templates HTML 🖺
+## 3. Camada de Template 🖺
+***A camada de Template é responsável pela apresentação dos dados ao utilizador final. Ela define a aparência visual da página da web, utilizando marcação HTML com elementos de template Django (geralmente em linguagem de template Django, que é uma extensão do HTML com tags e filtros específicos do Django) para inserir dinamicamente dados fornecidos pela camada de View. Os templates do Django permitem que os desenvolvedores criem páginas da web dinâmicas de forma eficiente, separando a lógica de apresentação dos dados da lógica de negócios subjacente (View).***
 
-Designa-se de template um ficheiro HTML retornado ao browser por uma função view específica, eventualmente renderizado com conteúdos. Começamos assim por construir os conteúdos que teremos para retornar a um cliente. 
+Comecemos assim por construir conteúdos que queremos poder apresentar ao utilizador final. 
 
-Na pasta `pwsite`, crie a pasta `templates`, e dentro dessa uma pasta `pwsite`. Crie um ficheiro `index.html` (ficando com o caminho `/home/axxxxxx/project/pwsite/templates/pwsite/index.html`) e insira o conteúdo em baixo.
+1. Na pasta `pwsite`, crie a pasta `templates`, e dentro dessa uma pasta `pwsite`.
+2. Crie um ficheiro `index.html` (ficando com o caminho `/home/axxxxxx/project/pwsite/templates/pwsite/index.html`) e insira o conteúdo em baixo.
+3. Crie também o ficheiro `sobre.html` e insira o conteúdo em baixo.
+
+Alguns comentários:
+* É importante ter o HTML bem indentado, para garantir visualmente que não nos esquecemos de marcadores de fecho.
+* No elemento <style> podemos estilizar elementos HTML (o chamado CSS). Neste caso, `background:purple` indica que o body tem cor de fundo roxo, e `color:white` que a cor de texto branco. Mude a seu gosto estes atributos. Daqui a umas semanas aprenderá muito mais sobre esta tecnologia CSS.
 
 #### index.html
 ```HTML
@@ -192,12 +199,9 @@ Na pasta `pwsite`, crie a pasta `templates`, e dentro dessa uma pasta `pwsite`. 
 </body>
 </html>
 ```
-Apesar de não ser obrigatório, é importante ter o HTML bem indentado, para garantir visualmente que não nos esquecemos de marcadores de fecho.
-
-Conforme falado na aula, no elemento <style> podemos estilizar elementos HTML. Neste caso, `background:purple` indica que o body tem cor de fundo roxo, e `color:white` que a cor de texto branco. Mude a seu gosto estes atributos. 
 
 #### sobre.html
-crie também o ficheiro `sobre.html`
+
 
 ```html
 <!DOCTYPE html>
@@ -239,9 +243,11 @@ crie também o ficheiro `sobre.html`
 Crie uma terceira página onde fala daquilo que tem mais gostado de aprender em PW, coisas que gostaria de aprender ou acha interessante nesta área, ou ideias de sites que possa vir a fazer.
 
 
-## 4. views.py ⚙️
+## 4. Camada de View (implementada por views.py) ⚙️
 
-No ficheiro views, crie funções que renderizem o conteúdo. Para index.html será
+***No MVT, a camada de View lida com a lógica de negócios e a preparação dos dados. É implementada pelo ficheiro views.py, um conjunto de funções, cada uma responsável por responder ao pedido (request) de um recurso (URL), retornando o recurso pedido, um template HTML eventualmente renderizado com dados e customizado. Faz assim a interligação entre os dados e os templates (conteúdo retornado), respondendo aos pedidos encaminhados via urls.***
+
+No ficheiro `views.py`, crie funções que renderizem o conteúdo. Por exemplo, para retornar o ficheiro `index.html` está implementada a função `index_view` (nas funções view use o prefixo `_view`).
 
 ```Python
 # pwsite/views.py
@@ -252,13 +258,20 @@ def index_view(request):
     return render(request, "pwsite/index.html")
 ```
 
-Inclua uma função para renderizar sobre.html e interesses.html. Adicione a cada rota um valor para `name`. Será necessário para construir hiperlinks.
+Inclua uma função para renderizar `sobre.html` e outra `interesses.html`. 
 
 Experimente passar como contexto a data, e apresente-a no footer em vez do ano, recorrendo ao módulo datetime, de forma a que esta apareça na pagina home (veja os slides da aula).
 
 ## 5. urls.py ✉️
 
-Na pasta noobsite, crie um novo ficheiro `urls.py` com o seguinte conteúdo:
+***Na arquitetura MVT do Django, existe uma camada extra, URLConf, relacionada com a View. É responsável pelo mapeamento de rotas para funções de view. Esta camada é implementada no ficheiro urls.py. Nela se definem padrões de URL para a aplicação, associados a funçoes de view específicas.***
+
+Na pasta `/pwsite`, crie um novo ficheiro `urls.py`. Em baixo apresenta-se já configurado com a rota para index_view.
+
+Alguns comentários:
+* declaramos `app_name = 'pwsite'`, para evitar qualquer ambiguidade de URLs, quando temos multiplas aplicações num mesmo projeto. 
+* A lista `urlpatterns` encaminha (*routes*) URLs para funções em views.py. Neste caso, encaminha o URL `index/` para a função `view.index_view`. Adicione URLs para as restantes funções que definiu.
+* Cada rota tem um `name`. Será necessário para construir hiperlinks.
 
 ```Python
 # pwsite/urls.py
@@ -273,29 +286,30 @@ urlpatterns = [
 ]
 ```
 
-A lista urlpatterns encaminha (*routes*) URLs para funções em views.py. Neste caso, encaminha o URL `index/` para a função `view.index_view`. Adicione URLs para as restantes funções que definiu.
-
-Definimos `app_name` para especificar o nome da aplicação, a ser usado nos hiperlinks.
-
 ## 6. hiperlinks 🔗
 
-Uma das propriedades chave de um website é podermos navegar entre as páginas HTML através de hiperlinks. Vamos adicionar um menu de navegação com hiperlinks em cada uma das páginas. Será um marcador <nav> com vários marcadores <a>, um por hiperlink. Constroi-se especificando o valor de `name` que foi dado em `urls.py` à rota. `{% url 'pwsite:index' %}`é um bloco da linguagem template do Django. Falaremos mais em detalhe na próxima aula. O bloco tem como url:
-* o nome da aplicação, `pwsite`, que está definido na variável `app_name` em `pwsite/urls.py`
-* o nome da rota,  `index`, que está definido na variável `name` do respetivo path em `pwsite/urls`
+Uma das propriedades chave de um website é podermos navegar entre as páginas HTML através de hiperlinks. Adicione um menu de navegação com hiperlinks para cada uma das páginas, permitindo assim navegar de uma pagina para a outra. Para tal, crie um marcador `<nav>` de navegação, dentro do qual criará marcadores `<a>` com hiperlinks para as três páginas. Copie este elemento em todas as páginas, dentro do elemento `header`, por baixo do elemento `<h1>`.
 
+Em baixo está o exemplo de um elemento `<nav>` apenas com um hiperlink.  
+      
 ```html
 <nav>
   <a href="{% url 'pwsite:index' %}">Introducao</a>
 </nav>
 ```
 
-Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as páginas, dentro do elemento `header`, por baixo do elemento `<h1>`.
+Alguns detalhes:
+* o atributo `href` (hipertext reference) especifica o destino do link, um URL para o qual o link aponta, e para onde será redirecionado se o utilizador clicar neste.
+* `{% url 'pwsite:index' %}`é um bloco da linguagem template do Django que especifica a rota: identifica o nome da aplicação (`pwsite`, que foi definido na variável `app_name` em `pwsite/urls.py`) e identifica a respetiva rota (`index`) 
+
 
 
 ## 7. Ready... GO! 🎉 
 
 * ⟳ Recarregue (reload) a aplicação premindo no botão "Reload", e abra numa página a aplicação.
 * teste os URL que criou, e verifique se as respectivas funções retornam o devido.
+
+Parabéns, criou o seu segundo website 🥳🥳!
 
 
 # C. Crie um website a seu gosto
@@ -309,6 +323,7 @@ Crie uma aplicação a seu gosto. Relembre os passos:
 6. 🔗 criação de menu de navegação com hiperlinks para todas as páginas, que deverá estar presente no header de todas as páginas criadas.
 7. ⟳ Recarregar (reload) a aplicação. Eventuais erros serão apresentados de forma explícita, pois está em modo debug.
 
+Parabéns, criou o seu terceiro website 🥳🥳🥳! 
 
 # &omega; Entrega 📦
 
