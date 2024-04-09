@@ -9,11 +9,11 @@ Univesidade Lusófona
 * Nesta ficha não exploraremos ainda o models.
 
 Índice:
-* Introdução ao HTML
+* &alpha;. Introdução ao HTML
 * A. noobsite, o meu primeiro website 👶
 * B. pwsite 😎
 
-# Introdução ao HTML `<>`
+# &alpha;. Introdução ao HTML `<>`
 
 O HTML é uma linguagem de marcação para construir páginas Web (*HyperText Markup Language*). Os ficheiros HTML possuem marcadores ou etiquetas (*tags*), palavras entre parênteses angulares (`<` e `>`) que são comandos de formatação da linguagem, para estruturar e estilizar aos conteúdos. 
 
@@ -26,7 +26,6 @@ Por exemplo, no elemento `<p>Isto é um parágrafo.</p>`:
  
  <summary>Clique para ver os marcadores usados nesta ficha</summary>
 
- Neste laboratório utilizará vários marcadores:
 * `<h1>` = marcador que define um titulo - heading1, a fonte ficando graaande (`<h2>` um subtítulo, `<h3>` um subsubtítulo, ...)
 * `<p>` = marcador que define um parágrafo
 * `<ul>` = marcador que define uma lista não numerada (`<ol>` para lista numerada)
@@ -50,7 +49,7 @@ Dentro de um marcador podem ser especificados pares de `atributo="valor"`. Os at
 </details>
 
 
-# A. noobsite, o meu primeiro website 👶
+# A. `noobsite`, o meu primeiro website 👶
 
 Neste primeiro exercício, criará o website mais simples do mundo! Um conjunto de páginas sem HTML nem hiperlinks, para se familiarizar com `urls` e `views`.
 
@@ -126,7 +125,7 @@ Parabéns, criou o seu primeiro website 🥳.
 
 
 
-# B. pwsite 😎
+# B. `pwsite` 😎
 
 Crie agora um segunto website, mais refinado, sobre programação web. Será um conjunto de páginas HTML com hiperlinks entre si, para se familiarizar ainda mais com `urls` e `views`, e agora também com `templates HTML`.
 
