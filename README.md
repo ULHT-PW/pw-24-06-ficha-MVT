@@ -237,7 +237,7 @@ Crie uma terceira página onde fala daquilo que tem mais gostado de aprender em 
 No ficheiro views, crie funções que renderizem o conteúdo. Para index.html será
 
 ```Python
-# project/views.py
+# pwsite/views.py
 
 from django.shortcuts import render
 
@@ -254,7 +254,7 @@ Experimente passar como contexto a data, e apresente-a no footer em vez do ano, 
 Na pasta noobsite, crie um novo ficheiro `urls.py` com o seguinte conteúdo:
 
 ```Python
-# noobsite/urls.py
+# pwsite/urls.py
 
 from django.urls import path
 from . import views  # importamos views para poder usar as suas funções
