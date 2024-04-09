@@ -296,7 +296,7 @@ Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as
 Crie uma aplicação a seu gosto. Relembre os passos:
 1. ✨ criação da aplicação com `python manage.py startapp novaapp`
 2. 🔧 configuração do ficheiro `project/settings.py` e `project/settings.py` com info da nova aplicação
-3. `<>` criação da pasta `templates/novaapp`, e de um conjunto de pelo menos 3 ficheiros HTML
+3. `<>` criação da pasta `templates/novaapp`, e de um conjunto de pelo menos 3 ficheiros HTML simples, com conteúdos a seu gosto. se não tiver ideias de texto, pode usar https://www.lipsum.com/ para gerar texto em latim. o importante não é o conteudo, mas os passos do processo. Todas as páginas deverão ter um `header` e `footer` semelhante.
 4.  ⚙️ definição em views.py de funções que renderizem os templates.
 5. ✉️ criação do ficheiro `novaapp/urls.py` (use como base o ficheiro `project/urls.py`), definindo um `app_name`, e em urlpatterns os paths com URLs e respetivas funções em views com um `name` cada.
 6. 🔗 criação de menu de navegação com hiperlinks para todas as páginas.
