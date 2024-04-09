@@ -13,7 +13,7 @@ Univesidade Lusófona
 * &alpha;. Introdução ao HTML `<>`
 * A. noobsite, o meu primeiro website 👶
 * B. pwsite 😎
-* &Omega; Entrega 📦
+* &omega; Entrega 📦
 
 # &alpha;. Introdução ao HTML `<>`
 
@@ -291,6 +291,6 @@ Crie hiperlinks para as restantes duas páginas. Copie este elemento em todas as
 * Recarregue (reload) a aplicação premindo no botão "Reload", e abra numa página a aplicação.
 * teste os URL que criou, e verifique se as respectivas funções retornam o devido.
 
-# &Omega; Entrega 📦
+# &omega; Entrega 📦
 
 Submeta no Moodle o link para cada uma das suas aplicações, Adicione `pwprofs` em Account\Education\teacher, para os professores poderem ajudar e verificar o código desenvolvido. 
